@@ -23,7 +23,7 @@ func Run(cfg *config.Config) {
 
 	log.Printf("%s v%s running on port %s", cfg.App.Name, cfg.App.Version, cfg.HTTP.Port)
 
-	if err := srv.Start(); err != nil {
+	if err := srv.StartTCP(); err != nil {
 		log.Fatalf("Failed to start RPC server: %v", err)
 	}
 }
