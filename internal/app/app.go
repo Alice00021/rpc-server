@@ -32,12 +32,10 @@ func Run(cfg *config.Config) {
 
 	errChan := make(chan error, 1)
 
-	go func() {
-		if err := srv.StartTCP(); err != nil {
-			errChan <- err
-		}
-	}()
-
+	if err := srv.StartTCP(errChan); err != nil {
+		l.Error("RPC start error: %v", err)
+		return
+	}
 	select {
 	case s := <-interrupt:
 		l.Info("signal received: %s", s.String())

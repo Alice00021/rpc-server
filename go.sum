@@ -2,6 +2,8 @@ github.com/Alice00021/test_common v0.0.0-20251209071042-c6736d903c8d h1:WcJIjNgP
 github.com/Alice00021/test_common v0.0.0-20251209071042-c6736d903c8d/go.mod h1:bpVN7938MD3I6f+xRg8U9Msf7piy0RBJ76LK+V/pxbo=
 github.com/Alice00021/test_common v0.0.0-20251210065746-dc04c0a29c9b h1:57W6+fTyfOHZOJiox+OX218YX8T5LFxnvF3ApCGXQK0=
 github.com/Alice00021/test_common v0.0.0-20251210065746-dc04c0a29c9b/go.mod h1:bpVN7938MD3I6f+xRg8U9Msf7piy0RBJ76LK+V/pxbo=
+github.com/Alice00021/test_common v0.0.0-20251210100945-1723d3a782e6 h1:OjHQb9cZQgwuDoDnh6bUHEqH3Hs3CFgSoADSRxPETJ0=
+github.com/Alice00021/test_common v0.0.0-20251210100945-1723d3a782e6/go.mod h1:bpVN7938MD3I6f+xRg8U9Msf7piy0RBJ76LK+V/pxbo=
 github.com/BurntSushi/toml v1.5.0 h1:W5quZX/G/csjUnuI8SUYlsHs9M38FC7znL0lIO+DvMg=
 github.com/BurntSushi/toml v1.5.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/caarlos0/env/v11 v11.3.1 h1:cArPWC15hWmEt+gWk7YBi7lEXTXCvpaSdCiZE2X5mCA=
