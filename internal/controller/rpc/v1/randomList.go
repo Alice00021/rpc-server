@@ -29,6 +29,6 @@ func (s *RandomListService) GetRandomList(req request.FibRequest, resp *[]int64)
 		return err
 	}
 
-	resp = &result
+	*resp = result
 	return nil
 }
