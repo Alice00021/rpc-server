@@ -1,0 +1,1 @@
+{"level":"info","time":"2025-12-10T10:41:55+03:00","caller":"/home/alice/test_go_monorepo/rpc-server/cmd/app/main.go:18","message":"signal received: interrupt"}

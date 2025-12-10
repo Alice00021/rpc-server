@@ -8,23 +8,28 @@ import (
 )
 
 type (
+	// Config -.
 	Config struct {
 		App  App
 		HTTP HTTP
 		Log  Log
 	}
 
+	// App -.
 	App struct {
 		Name    string `env:"APP_NAME,required"`
 		Version string `env:"APP_VERSION,required"`
 	}
 
+	// HTTP -.
 	HTTP struct {
 		Port string `env:"HTTP_PORT,required"`
 	}
 
+	// Log -.
 	Log struct {
-		Level string `env:"LOG_LEVEL" envDefault:"debug"`
+		Level    string `env:"LOG_LEVEL,required"`
+		FileName string `env:"LOG_FILE_NAME,required"`
 	}
 )
 

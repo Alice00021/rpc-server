@@ -3,7 +3,7 @@ module github.com/Alice00021/rpc-server
 go 1.24.9
 
 require (
-	github.com/Alice00021/test_common v0.0.0-20251209071042-c6736d903c8d
+	github.com/Alice00021/test_common v0.0.0-20251210065746-dc04c0a29c9b
 	github.com/caarlos0/env/v11 v11.3.1
 	github.com/joho/godotenv v1.5.1
 )
