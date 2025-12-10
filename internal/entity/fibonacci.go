@@ -1,5 +1,5 @@
 package entity
 
 type Fib struct {
-	Result int `json:"result"`
+	Result int64 `json:"result"`
 }

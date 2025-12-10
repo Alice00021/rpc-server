@@ -4,6 +4,9 @@ import "context"
 
 type (
 	Fibonacci interface {
-		Calculate(context.Context, int) (int, error)
+		CalculateFibonacci(context.Context, int64) (int64, error)
+	}
+	RandomList interface {
+		GetRandomList(context.Context, int64) ([]int64, error)
 	}
 )

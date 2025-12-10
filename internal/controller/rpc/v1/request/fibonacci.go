@@ -1,5 +1,5 @@
 package request
 
 type FibRequest struct {
-	N int `json:"n" validate:"required"`
+	N int64 `json:"n" validate:"required"`
 }

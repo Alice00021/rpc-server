@@ -8,8 +8,11 @@ import (
 )
 
 func NewRouter(srv *commonServer.Server, uc *di.UseCase, l logger.Interface) error {
-
 	fibService := v1.NewFibService(uc.Fibonacci, l)
+	randomListService := v1.NewRandomListService(uc.RandomList, l)
 
-	return srv.Register(fibService)
+	srv.Register(fibService)
+	srv.Register(randomListService)
+
+	return nil
 }

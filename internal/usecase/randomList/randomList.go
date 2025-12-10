@@ -1,9 +1,10 @@
-package fibonacci
+package randomList
 
 import (
 	"context"
 	"github.com/Alice00021/rpc-server/internal/entity"
 	"github.com/Alice00021/test_common/pkg/logger"
+	"math/rand"
 )
 
 type useCase struct {
@@ -16,17 +17,15 @@ func New(l logger.Interface) *useCase {
 	}
 }
 
-func (f *useCase) CalculateFibonacci(ctx context.Context, n int64) (int64, error) {
+func (f *useCase) GetRandomList(ctx context.Context, n int64) ([]int64, error) {
 	if n < 0 {
-		return 0, entity.ErrInvalidNumber
+		return nil, entity.ErrInvalidNumber
 	}
 
-	return fib(n), nil
-}
-
-func fib(n int64) int64 {
-	if n < 2 {
-		return n
+	result := make([]int64, n)
+	for i := range result {
+		result[i] = rand.Int63n(n)
 	}
-	return fib(n-1) + fib(n-2)
+
+	return result, nil
 }

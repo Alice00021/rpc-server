@@ -9,26 +9,26 @@ import (
 	"github.com/Alice00021/test_common/pkg/logger"
 )
 
-type FibService struct {
-	uc usecase.Fibonacci
+type RandomListService struct {
+	uc usecase.RandomList
 	l  logger.Interface
 }
 
-func NewFibService(uc usecase.Fibonacci, l logger.Interface) *FibService {
-	return &FibService{uc: uc, l: l}
+func NewRandomListService(uc usecase.RandomList, l logger.Interface) *RandomListService {
+	return &RandomListService{uc: uc, l: l}
 }
 
-func (s *FibService) CalculateFibonacci(req request.FibRequest, resp *entity.Fib) error {
-	result, err := s.uc.CalculateFibonacci(context.Background(), req.N)
+func (s *RandomListService) GetRandomList(req request.FibRequest, resp *[]int64) error {
+	result, err := s.uc.GetRandomList(context.Background(), req.N)
 	if err != nil {
 		if errors.Is(err, entity.ErrInvalidNumber) {
 			return err
 		}
 
-		s.l.Error(err, "rpc - v1 - CalculateFibonacci")
+		s.l.Error(err, "rpc - v1 - GetRandomList")
 		return err
 	}
 
-	resp.Result = result
+	resp = &result
 	return nil
 }
